@@ -8,7 +8,7 @@ Very clean, without polybars or any type of bars. Everything is invisible.
 
 ## tmux
 
-Basically tmux, but vim friendly.
+Tmux, but vim friendly.
 
 ## nvim 
 
