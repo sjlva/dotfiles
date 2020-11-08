@@ -13,7 +13,7 @@ Core to my tmux work is the combination of a plugin that bring Vim & tmux togeth
 
 ## nvim 
 
-I use few Vim plugins and don't spend much time customizing them. Usually, I change the other dotfiles to Vim's style. Vim provides a way of editing text that I love, it's not about productivity or speed, it's about being focused and having more freedom to think, when I don't need to think about the tool, it's easier to focus on what matters.
+I use few Vim plugins and don't spend much time customizing them. Usually, I change the other dotfiles to Vim's style. Vim provides a way of editing text that I love, it's not about productivity or speed, it's about being focused and having more freedom to think, when I don't need to worry about the tool, it's easier to focus on what matters.
 It currently supports linting, syntax highlighting, autocomplete, git, and has a command-line fuzzy finder, [fzf](https://github.com/junegunn/fzf).
 
 ## i3
