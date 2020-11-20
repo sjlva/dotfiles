@@ -7,7 +7,7 @@ My dotfiles, very simple but all I need.
 Tmux allows me to combine processes, shells and Vim in any way I need for the project at hand. I'm able to build my own IDE-like experience. I'm a big user and huge fan.  
 Core to my tmux work is the combination of a plugin that bring Vim & tmux together, [vim-slime](https://github.com/jpalardy/vim-slime) for sending commands from vim to tmux, making possible to code in any language interpreter at the same config.
 
-| ![vim-slime demo](https://github.com/jpalardy/vim-slime/blob/master/assets/vim-slime.gif) | 
+| ![vim-slime demo](https://i.imgur.com/yzfR9hy.gif) | 
 |:--:| 
 | *vim-slime demo, image from [vim-slime.](https://github.com/jpalardy/vim-slime)* |
 
