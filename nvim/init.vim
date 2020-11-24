@@ -2,6 +2,7 @@ set nocompatible
 filetype off 
 
 set guicursor=
+set termguicolors
 set noshowmatch
 set relativenumber
 set nohlsearch
@@ -29,10 +30,10 @@ set colorcolumn=80
 " Plugins
 call plug#begin('~/.vim/plugged')
 
-" Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 " Plug 'lifepillar/vim-solarized8'
 " Plug 'gruvbox-community/gruvbox'
-Plug 'NLKNguyen/papercolor-theme'
+" Plug 'NLKNguyen/papercolor-theme'
 " Plug 'Valloric/YouCompleteMe'
 Plug 'autozimu/LanguageClient-neovim', {
   \ 'branch': 'next',
@@ -52,8 +53,14 @@ filetype plugin indent on
 
 " Set colorscheme
 set t_Co=256
-colorscheme PaperColor
+colorscheme gruvbox
 set background=dark
+let g:gruvbox_contrast_dark = 'hard'
+if exists('+termguicolors')
+        let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+        let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    endif
+let g:gruvbox_invert_selection='0'
 
 " Use tab for trigger completion with characters ahead and navigate.
 inoremap <silent><expr> <TAB>
