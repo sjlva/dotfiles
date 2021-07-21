@@ -3,5 +3,5 @@
 ## Install
 
 ```bash
-stow --adopt -vt ~ *
+stow --adopt -vt ~ */
 ```
