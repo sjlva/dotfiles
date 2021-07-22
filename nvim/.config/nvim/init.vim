@@ -31,10 +31,6 @@ set colorcolumn=80
 call plug#begin('~/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
-" Plug 'lifepillar/vim-solarized8'
-" Plug 'gruvbox-community/gruvbox'
-" Plug 'NLKNguyen/papercolor-theme'
-" Plug 'Valloric/YouCompleteMe'
 Plug 'autozimu/LanguageClient-neovim', {
   \ 'branch': 'next',
   \ 'do': 'bash install.sh',
@@ -45,7 +41,13 @@ Plug 'jpalardy/vim-slime'
 " Plug 'vim-airline/vim-airline-themes'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-fugitive'
-Plug 'junegunn/fzf'
+" Plug 'junegunn/fzf'
+
+" telescope requirements ---- 
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 call plug#end()
 
@@ -74,6 +76,11 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+" telescope fzy native
+lua << EOF
+require('telescope').load_extension('fzy_native')
+EOF
+
 " Vim-slime
 let g:slime_target = "tmux"
 
@@ -82,4 +89,9 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 
 let mapleader = " "
-nnoremap <C-m> i %>% <esc>
+
+" Find files using Lua functions
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
