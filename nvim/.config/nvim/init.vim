@@ -37,11 +37,9 @@ Plug 'autozimu/LanguageClient-neovim', {
   \ }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jpalardy/vim-slime'
-" Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-fugitive'
-" Plug 'junegunn/fzf'
 
 " telescope requirements ---- 
 Plug 'nvim-lua/popup.nvim'
