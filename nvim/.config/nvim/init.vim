@@ -47,6 +47,9 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
+" debugging tools ----
+Plug 'puremourning/vimspector'
+
 call plug#end()
 
 filetype plugin indent on
@@ -89,7 +92,20 @@ let g:netrw_liststyle = 3
 let mapleader = " "
 
 " Find files using Lua functions
-nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
-nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
-nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+nmap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nmap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nmap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nmap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+
+" debugging mappings
+let g:vimspector_enable_mappings = 'HUMAN'
+
+nmap <leader>dl :call vimspector#Launch()<cr>
+nmap <leader>dr :VimspectorReset<cr>
+nmap <leader>de :VimspectorEval
+nmap <leader>dw :VimspectorWatch
+nmap <leader>do :VimspectorShowOutput
+nmap <leader>di <Plug>VimspectorBalloonEval
+xmap <leader>di <Plug>VimspectorBalloonEval
+
+let g:vimspector_install_gadgets = ['debugpy']
