@@ -26,6 +26,7 @@ set encoding=utf-8
 set ruler
 set updatetime=50
 set colorcolumn=80
+set laststatus=2
 
 " Plugins
 call plug#begin('~/.vim/plugged')
@@ -37,7 +38,7 @@ Plug 'autozimu/LanguageClient-neovim', {
   \ }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jpalardy/vim-slime'
-Plug 'vim-airline/vim-airline'
+Plug 'itchyny/lightline.vim'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-fugitive'
 
@@ -81,6 +82,11 @@ endfunction
 lua << EOF
 require('telescope').load_extension('fzy_native')
 EOF
+
+"lightline colorscheme
+let g:lightline = {
+      \ 'colorscheme': 'gruvbox',
+      \}
 
 " Vim-slime
 let g:slime_target = "tmux"
