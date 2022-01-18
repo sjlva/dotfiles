@@ -38,6 +38,7 @@ Plug 'autozimu/LanguageClient-neovim', {
   \ }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jpalardy/vim-slime'
+Plug 'APZelos/blamer.nvim'
 Plug 'itchyny/lightline.vim'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-fugitive'
@@ -96,6 +97,12 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 
 let mapleader = " "
+
+" Git Blamer
+let g:blamer_enabled = 1
+let g:blamer_show_in_visual_modes = 0
+let g:blamer_show_in_insert_modes = 0
+let g:blamer_delay = 2000
 
 " Find files using Lua functions
 nmap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
