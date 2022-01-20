@@ -10,7 +10,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jpalardy/vim-slime'
 Plug 'itchyny/lightline.vim'
 Plug 'dense-analysis/ale'
-Plug 'tpope/vim-fugitive'
+Plug 'vimwiki/vimwiki'
 
 " telescope requirements ---- 
 Plug 'nvim-lua/popup.nvim'
