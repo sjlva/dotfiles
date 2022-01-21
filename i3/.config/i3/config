@@ -19,13 +19,13 @@ bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:JetBrains Mono 8
+font pango: JetBrains Mono NL  12
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec tilix
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -297,7 +297,7 @@ set $gray #a89984
 set $darkgray #1d2021
 
 # font used by i3 for titles and bars
-font pango:JetBrains Mono 8
+font pango: JetBrains Mono NL 12
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
@@ -313,7 +313,7 @@ bar {
 
 	bindsym button4 nop
 	bindsym button5 nop
-  font pango:JetBrains Mono 8
+  font pango: JetBrains Mono NL 12
 	strip_workspace_numbers yes
 
     colors {
@@ -344,12 +344,12 @@ client.urgent           $red $red $white $red $red
 
 # Set inner/outer gaps
 gaps inner 14
-gaps outer -2
+gaps outer 2
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
-gaps inner all set 10
-gaps outer all plus 5
+#gaps inner all set 10
+#gaps outer all plus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
 smart_gaps on
