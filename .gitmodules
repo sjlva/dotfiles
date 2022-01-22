@@ -1,0 +1,3 @@
+[submodule "arch-post-install"]
+	path = arch-post-install
+	url = https://github.com/sjlva/arch-post-install.git
