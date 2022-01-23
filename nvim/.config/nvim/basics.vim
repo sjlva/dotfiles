@@ -27,3 +27,4 @@ set ruler
 set updatetime=50
 set colorcolumn=80
 set laststatus=2
+set clipboard=unnamedplus
