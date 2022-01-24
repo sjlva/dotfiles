@@ -32,6 +32,8 @@ function! s:check_back_space() abort
 endfunction
 
 " Find files using Lua functions
+nmap <leader>fs <cmd>lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For >")})<cr>
+nmap <leader>fw <cmd>lua require('telescope.builtin').grep_string({ search = vim.fn.expand("<word>")})<cr>
 nmap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nmap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nmap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
