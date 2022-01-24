@@ -11,6 +11,7 @@ Plug 'jpalardy/vim-slime'
 Plug 'itchyny/lightline.vim'
 Plug 'dense-analysis/ale'
 Plug 'vimwiki/vimwiki'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " telescope requirements ---- 
 Plug 'nvim-lua/popup.nvim'
