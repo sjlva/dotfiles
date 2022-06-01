@@ -9,6 +9,7 @@ set $mod Mod4
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 default_border pixel 1
+for_window [class=".*"] border pixel 2
 
 # Hide borders
 hide_edge_borders none
@@ -346,12 +347,9 @@ gaps outer 2
 #gaps inner all set 10
 #gaps outer all plus 5
 
-# Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps on
-
 # Smart borders (draw borders around container only if it is not the only container on this workspace) 
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-smart_borders on
+smart_borders no_gaps
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner

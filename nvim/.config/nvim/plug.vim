@@ -11,6 +11,7 @@ Plug 'jpalardy/vim-slime'
 Plug 'itchyny/lightline.vim'
 Plug 'dense-analysis/ale'
 Plug 'vimwiki/vimwiki'
+Plug 'folke/todo-comments.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " telescope requirements ---- 
@@ -29,6 +30,10 @@ filetype plugin indent on
 " telescope fzy native
 lua << EOF
 require('telescope').load_extension('fzy_native')
+EOF
+
+lua << EOF
+require('todo-comments').setup {}
 EOF
 
 " Vim-slime
